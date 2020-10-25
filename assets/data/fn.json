@@ -69,12 +69,6 @@
         ]
       }
     },
-    "release": {
-      "value": "release candidate",
-      "references": [
-        "https://github.com/fnproject/fn/releases"
-      ]
-    },
     "interfaces": {
       "type": [
         {
@@ -166,36 +160,6 @@
           "references": []
         }
       ]
-    },
-    "quotas": {
-      "deployment": {
-        "codeSize": {
-          "value": "unbounded",
-          "references": []
-        },
-        "packageSize": {
-          "value": "unbounded",
-          "references": []
-        }
-      },
-      "runtime": {
-        "cpu": {
-          "value": "unbounded",
-          "references": []
-        },
-        "memory": {
-          "value": "unbounded",
-          "references": []
-        },
-        "storage": {
-          "value": "unbounded",
-          "references": []
-        },
-        "executionTime": {
-          "value": "unbounded",
-          "references": []
-        }
-      }
     }
   },
   "technicalView": {
@@ -242,7 +206,17 @@
           "value": "Go",
           "references": []
         }
-      ]
+      ],
+      "quotas": {
+        "packageSize": {
+          "value": "unbounded",
+          "references": []
+        },
+        "executionTime": {
+          "value": "unbounded",
+          "references": []
+        }
+      }
     },
     "versioning": {
       "appVersions": {

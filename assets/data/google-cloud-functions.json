@@ -40,10 +40,6 @@
         "references": []
       }
     },
-    "release": {
-      "value": "production",
-      "references": []
-    },
     "interfaces": {
       "type": [
         {
@@ -109,36 +105,6 @@
           "references": []
         }
       ]
-    },
-    "quotas": {
-      "deployment": {
-        "codeSize": {
-          "value": "limited",
-          "references": []
-        },
-        "packageSize": {
-          "value": "unbounded",
-          "references": []
-        }
-      },
-      "runtime": {
-        "cpu": {
-          "value": "limited",
-          "references": []
-        },
-        "memory": {
-          "value": "limited",
-          "references": []
-        },
-        "storage": {
-          "value": "unbounded",
-          "references": []
-        },
-        "executionTime": {
-          "value": "limited",
-          "references": []
-        }
-      }
     }
   },
   "technicalView": {
@@ -191,7 +157,17 @@
           "value": "Ruby",
           "references": []
         }
-      ]
+      ],
+      "quotas": {
+        "packageSize": {
+          "value": "bounded",
+          "references": []
+        },
+        "executionTime": {
+          "value": "bounded",
+          "references": []
+        }
+      }
     },
     "versioning": {
       "appVersions": {
